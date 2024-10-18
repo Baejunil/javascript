@@ -1,0 +1,111 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <script>
+/* 확인 문제 1번
+ 다음 중  상수를 선언할 때 사용하는 키워드는 어떤 것인가요? 1번
+ 1 const 0
+ 2 let X
+ 3 var X
+ 4 comment X
+
+  확인 문제 2번
+ 다음 중 값을 할당할 때 사용하는 연산자는 어떤 것인가요? 2번
+ 1 := X
+ 2 = 0
+ 3 <= X
+ 4 => X
+ 확인 문제 3번
+*/
+    //const=r;상수 선언: const 키워드는 변수 선언에만 사용되며,
+    //r=10;   // 대입할 때 =
+              // 기호 뒤에 변수 이름이 와야 gksek
+    const r =10;
+    
+    console.log(`넓이 = ${3.14 * r * r}`);
+    console.log(`둘레 = ${2 * 3.14 * r}`); 
+    /* 실행 결과
+    넓이 = 314
+    둘레 = 62.800000000000004
+    */
+    //let r 
+    //r= 10
+    let r1=10; 
+    console.log(`넓이 = ${3.14 * r * r}`); 
+    console.log(`둘레 = ${2 * 3.14 * r}`); 
+      /* 실행 결과
+    넓이 = 314
+    둘레 = 62.800000000000004
+    */
+   //확인 문제 4번
+  /* const number = 10;
+    console.log(++number); 
+    console.log(number++); 
+    console.log(++number); 
+    console.log(number--); 
+    위 코드는 const 로 선언된변수는 재활당이 불가능하여 다른걸로 해야한다
+    */ let number = 10;
+    console.log(++number); 
+    console.log(number++); 
+    console.log(++number); 
+    console.log(number--); 
+    /* 실행 결과
+11
+11
+13
+13*/
+/*확인 문제 5번
+ 다음 중 사용자로부터 불 입력을 받는 함수는 어떤 것인가요?
+input()
+boolInput()
+confirm()
+prompt(0)
+확인문제 6번
+ 다음 표의 빈칸을 채우세요.
+Number()	숫자 자료형으로 변환합니다.
+String()	문자열 자료형으로 변환합니다.
+Boolean()	불 자료형으로 변환합니다.
+*/
+// 확임문제 7번
+ // 사용자로부터 입력 받기
+ const cmInput = prompt("센티미터(cm)를 입력하세요:");
+        const cm = parseFloat(cmInput);
+        if (!isNaN(cm)) {
+            const inch = cm * 0.393701;
+            alert(cm + " cm는 " + inch.toFixed(2) + " inch입니다.");
+        }
+// 확인문제 8번
+const radiusInput = prompt("원의 반지름을 입력하세요:");
+        const radius = parseFloat(radiusInput);
+        if (!isNaN(radius)) {
+            const area = 3.14 * radius * radius;
+            const circumference = 2 * 3.14 * radius;
+            alert("원의 반지름: " + radius + "\n넓이: " + area.toFixed(2) + "\n둘레: " + circumference.toFixed(2));
+        }
+//확인문제9번
+const exchangeRate = 1207; // 1달러 = 1207원
+        const usdInput = prompt("달러를 입력하세요:");
+        const usd = parseFloat(usdInput);
+        if (!isNaN(usd)) {
+            const krw = usd * exchangeRate;
+            alert(usd + " 달러는 " + krw.toFixed(0) + " 원입니다.");
+        }
+    // 확인문제 10번 1 나이 입력 받기
+    let age = prompt("나이를 입력하세요:");
+    alert("당신의 나이는 " + age + "세입니다.");
+    // 확인문제 10번 2 이름 입력 받기
+     let name = prompt("이름을 입력하세요:");
+     alert("안녕하세요, " + name + "!");
+     // 확인문제 10번 3 덧셈
+     let num1 = prompt("첫 번째 숫자를 입력하세요:");
+     let num2 = prompt("두 번째 숫자를 입력하세요:");
+     let sum = parseFloat(num1) + parseFloat(num2);
+    alert("두 숫자의 합은 " + sum + "입니다.");
+</script>
+</body>
+</html>
