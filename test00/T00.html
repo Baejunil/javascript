@@ -1,0 +1,46 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <script>
+let ticketQuantity = 1; // 티켓 수
+let purchaseTime = 15; // 구매 시간 (15시는 오후 3시)
+
+if (ticketQuantity <= 1 && purchaseTime >= 15) {
+    console.log("티켓을 구매할 수 있습니다.");
+} else {
+    console.log("티켓 구매 조건을 충족하지 않습니다.");
+}
+
+let paymentCard = "신한카드"; // 결제하는 카드
+
+if (paymentCard === "우리카드" || paymentCard === "신한카드") {
+    console.log("10% 할인 적용 가능합니다.");
+} else {
+    console.log("할인 적용이 불가능한 카드입니다.");
+}
+
+let CircleMagic1 = true; 
+let castingok = true; 
+let MagicName = "매직미사일"; 
+
+
+if (CircleMagic1 && castingok) {
+    console.log("마법을 사용한다");
+} else {
+    console.log("마법을 사용하지 않는다.");
+}
+
+if ( MagicName === "라이트" ||  MagicName === "매직미사일") {
+    console.log("선택한 마법을 캐스팅한다:"+ MagicName);
+} else {
+    console.log("다른 마법을 캐스팅하세요.");
+}
+
+    </script>
+</body>
+</html>
