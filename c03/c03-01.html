@@ -1,0 +1,70 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <script>
+        //c03/c03-01.html
+        //조건문
+        //if조건문
+        if(273<100){
+            console.log("273<100=>true");
+        }
+        console.log("afterof");
+
+        //현재 시각을 구하기
+        const date=new Date()
+        //현재 연도 구하기
+        console.log(date.getFullYear());
+        //현재 달 구하기, 자바스크립트는 월을 0~11로 리턴합니다
+        console.log(date.getMonth()+1);
+        //현재 날 구하기
+        console.log(date.getDate());
+        //현재 시 구하기
+        console.log(date.getHours());
+        //현재 분 구하기
+        console.log(date.getMilliseconds());
+        //현재 초 구하기
+        console.log(date.getSeconds());
+
+        //오전과 오후 구분하기
+        //현재 시간을 0~23사이의 값으로 리턴
+        const hour=date.getHours()
+        console.log(hour);
+        if(hour<12){
+            console.log("오전입니다.")
+        }
+        if(hour>12){
+            console.log("오후입니다");
+        }
+        //if else조건문
+        if(hour<12){
+            console.log("오전입니다.")    
+        }else{
+            console.log("오후입니다");
+        }
+        //중첩 조건문
+        if(hour<11){
+            console.log("아침먹을시간");
+        }else{
+            if(hour<15){
+                console.log("점심먹을시간");
+            }else{
+                console.log("저녁먹을시간");
+            }
+        }
+        //else if 조건문
+        if(hour<11){
+            console.log("아침먹을시간");
+        }else if(hour<15){
+            console.log("점심시간");
+        }else{
+            console.log("저녁시간");
+        }
+        
+    </script>
+</body>
+</html>
