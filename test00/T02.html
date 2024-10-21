@@ -1,0 +1,249 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <script>
+
+//확인문제 1번
+//다음 예제중에서 참입니다를 출력하느것은 몇번일까요? 3번
+  /*
+  1번  const x=1
+    if(x>4){
+        console.log("참입니다");
+    }
+   2번 const x=0
+    if(x1>4){
+        console.log("참입니다");
+    }
+   3번 const x=10
+    if(x>4){
+        console.log("참입니다");
+
+  */
+ //확인문제 2번 
+    const a = prompt('첫번째 숫자를 입력하세요:', '');
+    const b = prompt('두번째 숫자를 입력하세요:', '');
+    if (a > b) {
+        alert('첫번째로 입력한 숫자가 더 큽니다.');
+    } else if (a < b) {
+        alert('두번째로 입력한 숫자가 더 큽니다.');
+    } else {
+        alert('두 숫자가 같습니다.');
+    }
+
+ //확인문제 3번
+  /* 
+    if(x>10){
+        if(x<20){
+            console.log('조건에 맞습니다');
+        }
+    }
+    if(X>10 &&  x<20){
+        console.log('조건에 맞습니다');
+    } 
+    */
+ //확인문제 4번 사용자에게 숫자를  입력받아 양수,0음수를 구분하는 프로그램
+ const a1 = Number(prompt('숫자를 입력해주세요:', ''));
+
+    if (a1 > 0) {
+        alert('입력한 숫자는 양수입니다.');
+    } else if (a1 === 0) {
+        alert('입력한 숫자는 0입니다.');
+    } else {
+        alert('입력한 숫자는 음수입니다.');
+    }
+ //확인문제 5번 사용자에게 숫자를 입력받아 홀수와 짝수를 구분하는 프로그램
+ const a2 = Number(prompt('숫자를 입력해주세요:', ''));
+
+    if (a2 % 2 === 0) {
+        alert('입력한 숫자는 짝수입니다.');
+    } else {
+        alert('입력한 숫자는 홀수입니다.');
+    }
+ //확인문제 6번 현재가 몇월인지 계절을 구분하는 프로그램
+ const month = new Date().getMonth() + 1; 
+    let season;
+    if (month >= 3 && month <= 4) {
+        season = '봄';
+    } else if (month >= 5 && month <= 9) {
+        season = '여름';
+    } else if (month >= 10 && month <= 11) {
+        season = '가을';
+    } else {
+        season = '겨울';
+    }
+    alert(`현재는 ${month}월이며, 계절은 ${season}입니다.`);
+    //현재 기상청에서 사계절 재설정에 들어가는 개월수입니다
+    //따라해보기1번
+    const score = Number(prompt(' 학점을 입력해주세요.', '학점'))
+    if (score === 4.5) {
+    alert('신')
+    } else if (4.2 <= score && score < 4.5) {
+     alert('교수님의 사랑')
+    } else if (3.5 <= score && score < 4.2){
+    alert('현 체제의 수호자')
+    } else if (2.8 <= score && score < 3.5){
+    alert('일반인')
+    } else if(2.3 <= score && score < 2.8){ 
+     alert('일탈을 꿈꾸는 소시민')
+    }else if (1.75 <= score && score < 2.3) {
+    alert('오락문화의 선구자')
+    }else if (1.0 <= score && score < 1.75){
+    alert('불가축천민')
+    } else if(0.5 <= score && score < 1.0){ 
+     alert('자벌레')
+    }else if (0 <= score && score < 0.5) {
+    alert('플랑크톤')
+    }else{
+        alert('시대를 앞서가는 혁명은 씨앗')
+    }
+    //따라해보기2번
+    const score1 = Number(prompt(' 학점을 입력해주세요.', '학점'))
+    if (score1=== 4.5) {
+    alert('신')
+    } else if (4.2 <= score1 ) {
+     alert('교수님의 사랑')
+    } else if (3.5 <= score1){
+    alert('현 체제의 수호자')
+    } else if (2.8 <= score1 ){
+    alert('일반인')
+    } else if(2.3 <= score1 ){ 
+     alert('일탈을 꿈꾸는 소시민')
+    }else if (1.75 <= score1 ) {
+    alert('오락문화의 선구자')
+    }else if (1.0 <= score1 ){
+    alert('불가축천민')
+    } else if(0.5 <= score1 ){ 
+     alert('자벌레')
+    }else if (0 <= score1 ) {
+    alert('플랑크톤')
+    }else{
+        alert('시대를 앞서가는 혁명은 씨앗')
+    }
+//따라해보기 3번
+const rawInput = prompt('태어난 해를 입력해주세요.', '');
+ const year = Number(rawInput);
+ const e = year % 12;
+
+    let result;
+    if (e === 0) {
+        result = '원숭이';
+    } else if (e === 1) {
+    result = '닭';
+    } else if (e === 2) {
+    esult = '개';
+    } else if (e === 3) {
+    result = '돼지';
+    } else if (e === 4) {
+    result = '쥐';
+    } else if (e === 5) {
+    result = '소';
+    } else if (e === 6) {
+    result = '호랑이';
+    } else if (e === 7) {
+    result = '토끼';
+    } else if (e === 8) {
+    result = '용';
+    } else if (e === 9) {
+    result = '뱀';
+    } else if (e === 10) {
+    result = '말';
+    } else if (e === 11) {
+    result = '양';
+    }
+    alert(`${year}년에 태어났다면 ${result} 띠입니다.`);
+//따라해보기 4번
+const rawInput1 = prompt('태어난 해를 입력해주세요.', '');
+    const year1 = Number(rawInput);
+    const tti = '원숭이, 닭, 개, 돼지, 쥐, 소, 호랑이, 토끼, 용, 뱀, 말, 양'.split(', ');
+    const e1 = year1 % 12;
+    alert(`${year1}년에 태어났다면 ${tti[e]} 띠입니다.`);
+// 확인문제 7번
+const result2 = (100 > 200)
+    ? prompt(' 값을 입력해주세요', '')
+    : confirm('버튼을 클릭해주세요');
+    alert(result2);
+/*
+사용자가 "버튼을 클릭해주세요"라는 메시지가 있는 확인 대화상자가 나타나고,
+"확인"을 클릭하면 true가 알림창에 표시되고,
+"취소"를 클릭하면 false가 알림창에 표시된다.*/
+//확인문제 8번
+const rawInput3 = prompt('태어난 해를 입력해주세요.', '');
+    const year3 = Number(rawInput);
+    const e3 = year % 12;
+    let result3;
+        switch (e) {
+            case 0:
+                result3 = '원숭이';
+                break;
+            case 1:
+                result3 = '닭';
+                break;
+            case 2:
+                result3 = '개';
+                break;
+            case 3:
+                result3 = '돼지';
+                break;
+            case 4:
+                result3 = '쥐';
+                break;
+            case 5:
+                result3 = '소';
+                break;
+            case 6:
+                result3 = '호랑이';
+                break;
+            case 7:
+                result3 = '토끼';
+                break;
+            case 8:
+                result3 = '용';
+                break;
+            case 9:
+                result3 = '뱀';
+                break;
+            case 10:
+                result3 = '말';
+                break;
+            case 11:
+                result3 = '양';
+                break;
+            default:
+                result3 = '알 수 없는 띠';
+        }
+
+        alert(`${year3}년에 태어났다면 ${result3} 띠입니다.`);
+    //확인문제 9번
+    const rawInput4 = prompt('태어난 해를 입력해주세요.', '');
+        const year4 = Number(rawInput);
+        const animals = ['쥐', '축', '인', '묘', '진', '사', '오', '미', '신', '유', '술', '해'];
+        const ganji = ['갑', '을', '병', '정', '무', '기', '경', '신', '임', '계'];
+        const animalIndex = year4 % 12;
+        const animal = animals[animalIndex];
+        const ganjiIndex = year4 % 10;
+        const ganjiResult = ganji[ganjiIndex];
+
+        alert(`${year4}년에 태어났다면 ${animal} 띠이며, 간지는 ${ganjiResult}입니다.`);
+    //확인문제 10번
+    /*
+    다음중에서 switch 조건문과 직접적인 관련이 없는 키워드를 고르세요 번
+    1번 switch
+    2번 break
+    3번 default
+    4번 else
+    
+    확인문제 11번
+    다음중 다른실행 결과를 내는 코드를 고르세요 2번
+    1번 true ? alert('출력A) : alert('출력B)
+    2번 false ? alert('출력B) : alert('출력A)
+    3번 true | | alert('출력A)
+    4번 true && alert('출력A)
+    */
+   </script>
+</body>
+</html>
