@@ -1,0 +1,94 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <script>
+        // 확인문제 1번
+        //1번 3
+        //2번 바나나
+        //3번 32
+        //확인문제 2번
+        const array= [1, 2, 3, 4] 
+        console.log(array.length)  // 4가 출력이됨
+        console.log(array.push(5)) // 5가 추가되고 5가 출력
+        //확인문제 3번
+        //1번 비파괴적 처리
+        //2번 파괴적 처리
+        //3번 비파괴적 처리
+        //4번 비파괴적 처리
+
+        //확인문제4 번 문제
+        let output = '';
+        for(let i=1; i<=10; i++){
+            for(let j=1; j<=i; j++){
+                output += "*";
+            }
+            output += '\n'
+        }
+        console.log(output);
+        //확인문제 5번 문제
+        let output1 = '';
+
+        for(let i=1; i<=15; i++){
+            for(let j=i; j<=15; j++){
+                output1 += " ";
+            }
+            for(let j=1; j<=i*2-1; j++){
+                output1 += "*";
+            }
+            output1 += '\n'
+        }
+        console.log(output1);
+        //확인문제 6번
+        const array2=['사과','배','귤','바나나']
+        console.log('# for in 반복문')
+        for (const i in array2){
+            console.log(i);
+        }
+        console.log('# for of 반복문');
+        for (const i in array2){
+            console.log(i);
+        }
+        //출력 결과
+        /*사과
+            배
+            귤
+            바나나
+            */
+        //확인문제 7번
+        const array3 = []
+       // for (const i = 0; i < 3; i++)  const-> let 으로 수정해줘야한다
+       for(let i = 0; i < 3; i++) {
+        array3.push((i * i) + 3)
+       } 
+        console.log(array3)
+        //결과 
+       //{3,4,7}
+       //확인문제 8번
+        let output3 = BigInt(1); 
+        for (let i = 1; i <= 100; i++) {
+            output3 *= BigInt(i); 
+        }
+        console.log(`1~100의 숫자를 모두 곱하면, ${output3}입니다.`);
+        //출력값 93326215443944152681699238856266700490715968264381621468592963895217599993229915608941463976156518286253697920827223758251185210916864000000000000000000000000입니다.
+        //확인문제 9번
+        let output4 = '';
+        const size = 5;
+        for (let i = 1; i <= size * 2 - 1; i++) {
+            const stars = i <= size ? i : size * 2 - i;
+            for (let j = 0; j < size - stars; j++) {
+                output4 += ' ';
+            }
+            for (let k = 0; k < (2 * stars - 1); k++) {
+                output4 += '*';
+            }
+            output4 += '\n';
+        }
+        console.log(output4);
+        </script>
+    </body>
+</html>
