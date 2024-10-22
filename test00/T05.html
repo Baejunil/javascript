@@ -1,0 +1,68 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <script>
+        //확인문제 1번
+        let numbers = [273, 25, 75, 52, 103, 32, 57, 24, 76];
+            let oddNumbers = numbers.filter(num => num % 2 !== 0);
+            console.log(`홀수: ${oddNumbers}`);
+            let below100 = numbers.filter(num => num <= 100);
+            console.log(`100 이하의 수: ${below100}`);
+            let divisibleBy5 = numbers.filter(num => num % 5 === 0);
+            console.log(`5로 나눈 나머지가 0인 수: ${divisibleBy5}`);
+        //확인문제 2번
+        const array = ['사과', '배', '귤', '바나나'];
+            console.log('# forEach 메서드');
+            array.forEach((item, index) => {
+            console.log(index); 
+            });
+            console.log('# for of 반복문');
+            array.forEach(item => {
+            console.log(item); });
+        // 문제 3: 3의 배수 찾기
+        const num = 3; // 3의 배수 찾기
+        const limit = 10;
+            function findMultiples(check, limit) {
+                const results = [];
+                for (let i = 1; i <= limit; i++) {
+                    if (check(i)) {
+                        results.push(i);
+                    }
+                }
+                return results.length > 0 ? results : [-1];
+            }
+            function isMultipleOf(num) {
+                return function(x) {
+                    return x % num === 0;
+                };
+            }
+            const multiples = findMultiples(isMultipleOf(num), limit);
+            console.log(`3의 배수: ${multiples}`); 
+
+        // 문제 4: 0 또는 5로만 구성된 숫자 찾기
+        const start = 5;
+        const end = 555;
+            function findNumbers(check, start, end) {
+                const results = [];
+                for (let i = start; i <= end; i++) {
+                    if (check(i)) {
+                        results.push(i);
+                    }
+                }
+                return results.length > 0 ? results : [-1];
+            }
+            function isZeroOrFive(num) {
+                return /^[05]+$/.test(num.toString());
+            }
+            const zeroOrFiveNumbers = findNumbers(isZeroOrFive, start, end);
+            console.log(`0 또는 5로만 구성된 숫자: ${zeroOrFiveNumbers}`); 
+
+
+    </script>
+</body>
+</html>
