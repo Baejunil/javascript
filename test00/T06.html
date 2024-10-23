@@ -1,0 +1,104 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <script>
+        //확인문제 1번
+       // const book = {
+       // name: "혼자 공부하는 파이썬",
+       // price: 18000,
+       // publisher: "한빛미디어"
+       //  };
+
+        /*확인문제 2번
+        다음중 객체에 동적으로 속성을 추가하는 문법을 고르세요 3번
+        1번  add객체[속성]=값 X
+        2번 객체.add('속성',값) X
+        3번 객체[속성]=값 0
+        4번 객체[속성] add 값 X
+
+        확인문제 3번
+       다음 중 객체에 동적으로 속성을 제거하는 문법을 고르세요 1번
+       1번 delete 객체[속성] 0
+       2번 객체.delete('속성') X
+       3번 delete 객체 from 속성 X
+       4번 delete 속성 from 객체 X
+       */
+      //확인문제 4번
+      const object ={
+        ko:'빵',
+        en:'bread',
+        ja:'パン',
+        fr:'pain',
+        es:'pan',
+        lang:{
+          ko:'한국어',
+          en:'영어',
+          ja:'일본어',
+          fr:'프랑스어',
+          es:'스페인어',   
+        },
+        print: function (lang) {
+            console.log(`${this.ko}는 ${this.lang[lang]}로 ${this[lang]}입니다.`);
+        }
+      }
+      object.print('es')
+      // 실행결과:빵는 스페인어로 pan입니다.
+      // 메소드라고 부를수있는 속성은 print 입니다
+
+      //확인문제 5번
+      /*const num = 52000
+      num.원 = function(){
+        return this.valueOf()+'원'
+      }
+      console.log(num.원);
+*/    const num = {
+        value: 52000,
+        원: function() {
+        return this.value + '원';
+            }
+        };
+        console.log(num.원());
+
+     //num은 원시값인 숫자(52000)로, 객체가 아니다 원시값에는 메소드를 추가할 수 없다
+     //undefined 고친후 52000원
+     
+     //확임문제6번
+     function printLang(code) {
+        return printLang._lang[code]
+        }
+        printLang._lang = {
+        ko: '한국어',
+        en: '영어' ,
+        ja: '일본어',
+        fr: '프랑스어',
+        es: '스페인어'
+        } 
+        console. log('printLang("ko"):', printLang('ko'))
+        console. log('printLang("en"):', printLang('en'))
+        //결과 예측 - printLang("ko"): 한국어
+        //           printLang("en"): 영어
+        
+        //확인문제 7번
+        const degree = 90;
+        const radian = degree * (Math.PI / 180);
+        const sinValue = Math.sin(radian);
+        console.log(sinValue); 
+        //만약 단순히 Math.sin(90)을 사용하면, 90이 라디안으로 
+        //해석되어 0.8939966636005579가 됩니다. 
+        //이는 90 라디안에 대한 사인 값으로, 
+        //우리가 기대하는 90도와는 전혀 다른 값입니다.
+        
+        //확인문제8번
+        //다음중 어떤 종유의 객체들이 모두 공유하는 속성과 메소드를 추가 할때 사용하는 객체의 이름을골라주세요 :2번
+        // 1 classProp
+        // 2 prototype 0
+        // 3 sample
+        // 4 fame
+    </script>
+</body>
+</html>
