@@ -1,0 +1,58 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>맛집 관리</title>
+</head>
+<body>
+    <script>
+        class Restaurant {
+            constructor(name, cuisine, rating, address) {
+                this._name = name;
+                this._cuisine = cuisine;
+                this._rating = rating;
+                this._address = address;
+            }
+
+            get name() { return this._name; }
+            get cuisine() { return this._cuisine; }
+            get rating() { return this._rating; }
+            get address() { return this._address; }
+
+            set name(value) { this._name = value; }
+            set cuisine(value) { this._cuisine = value; }
+            set rating(value) { this._rating = value; }
+            set address(value) { this._address = value; }
+        }
+
+        class RestaurantRc {
+            constructor() {
+                this.restaurants = [];
+            }
+
+            addRestaurant(restaurant) {
+                this.restaurants.push(restaurant);
+            }
+
+            listRestaurants() {
+                return this.restaurants.map(r => 
+                    `${r.name} - ${r.cuisine} - ${r.rating}★ - ${r.address}`
+                ).join('\n');
+            }
+
+            
+        }
+
+        const RC = new RestaurantRc()
+
+        //추가
+        RC.addRestaurant(new Restaurant("하루우동","일식",4.5,"부산진구 중앙대로 688 1층"))
+        RC.addRestaurant(new Restaurant("홍콩반점","중식",3.8,"양산 중부동692-1 청솔타워 1층"))
+        console.log("맛집목록");
+        console.log(RC.listRestaurants());
+
+      
+    </script>
+</body>
+</html>
